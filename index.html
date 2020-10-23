@@ -100,12 +100,12 @@
       transformRequest: transformRequest
     });
     
-  <div id="csvdata'></div>
+
     $(document).ready(function () {
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1qcgPSXeKPlwekHXu8-M1PVTxPChi-KG0MgVkZ7ikDhg/gviz/tq?tqx=out:csv&sheet=tattooshops ',
+        url: 'https://docs.google.com/spreadsheets/d/1qcgPSXeKPlwekHXu8-M1PVTxPChi-KG0MgVkZ7ikDhg/gviz/tq?tqx=out:csv&sheet=tattooshops',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -124,7 +124,7 @@
             map.addLayer({
               'id': 'csvData',
               'type': 'circle',
-              'source': {
+              'source': {'https://docs.google.com/spreadsheets/d/1qcgPSXeKPlwekHXu8-M1PVTxPChi-KG0MgVkZ7ikDhg/gviz/tq?tqx=out:csv&sheet=tattooshops'
                 'type': 'geojson',
                 'data': data
               },
